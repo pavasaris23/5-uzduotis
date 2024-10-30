@@ -1,0 +1,57 @@
+/* Bendras stilius */
+body {
+    background: mediumpurple;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Animacija su transition, transform ir hover */
+.transition-box {
+    width: 150px;
+    height: 150px;
+    background-color: paleturquoise;
+    border-radius: 20px;
+    transition: transform 0.4s ease, background-color 0.4s ease;
+}
+
+.transition-box:hover {
+    transform: scale(1.5) rotate(45deg);
+    background-color: darkmagenta;
+}
+
+/* Animacija su @keyframes */
+.keyframe-box {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border-radius: 10px;
+    animation: bounce 2s infinite alternate ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    text-align: center;
+    color: mediumpurple;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0) scale(1);
+        background-color: white;
+    }
+    50% {
+        transform: translateY(-100px) scale(1.2);
+        background-color: paleturquoise;
+    }
+    100% {
+        transform: translateY(0) scale(1);
+        background-color: white;
+    }
+}
